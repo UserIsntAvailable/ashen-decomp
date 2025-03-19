@@ -8,7 +8,9 @@ use dat::{
 };
 
 use super::{
-    color_map::Color, texture::{Texture, TextureSize}, Parser
+    Parser,
+    color_map::Color,
+    texture::{Texture, TextureSize},
 };
 use crate::utils::{format::ModelPythonFile, nom::*};
 
@@ -84,7 +86,7 @@ mod tests {
 
     use super::Model;
     use crate::{
-        asset::{color_map::ColorMap, Parser},
+        asset::{Parser, color_map::ColorMap},
         utils::{format::ModelPythonFile, test::*},
     };
 
