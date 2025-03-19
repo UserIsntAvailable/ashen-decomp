@@ -1,5 +1,5 @@
 pub mod compression;
-#[cfg(test)]
+#[cfg(any(test, feature = "conv"))]
 pub mod format;
 pub mod iterator;
 pub mod nom;
