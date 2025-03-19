@@ -1,5 +1,7 @@
+#[cfg(any(test, feature = "conv"))]
 use std::ops::Deref;
 
+#[cfg(any(test, feature = "conv"))]
 use image::{
     Frame, ImageEncoder, RgbaImage,
     codecs::{
@@ -15,11 +17,13 @@ use crate::asset::{
     sound::sample::{AudioBuffer, AudioSamplePoint},
 };
 
+#[cfg(any(test, feature = "conv"))]
 pub trait PngFile {
     fn to_png(&self) -> Vec<u8>;
 }
 
 // impl for any 2D array like data structure.
+#[cfg(any(test, feature = "conv"))]
 impl<Outer: ?Sized, Inner> PngFile for Outer
 where
     Outer: Deref<Target = [Inner]>,
@@ -53,10 +57,12 @@ where
     }
 }
 
+#[cfg(any(test, feature = "conv"))]
 pub trait GifFile {
     fn to_gif(&self) -> Vec<u8>;
 }
 
+#[cfg(any(test, feature = "conv"))]
 impl<Outer: ?Sized, Inner1, Inner2> GifFile for Outer
 where
     Outer: Deref<Target = [Inner1]>,

@@ -1,5 +1,5 @@
 pub mod compression;
-#[cfg(any(test, feature = "conv"))]
+// TODO(Unavailable): Rename to "conv"
 pub mod format;
 pub mod iterator;
 pub mod nom;
